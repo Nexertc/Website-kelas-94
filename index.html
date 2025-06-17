@@ -1,0 +1,442 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Smp Negeri 01 Dramaga kelas 94</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at top, #0b0c2a, #1f2a5c);
+      color: white;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      animation: bgPulse 10s infinite alternate;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif') repeat;
+      opacity: 0.04;
+      z-index: -1;
+      animation: bgScroll 120s linear infinite;
+    }
+    header {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 0 30px #0ff;
+      animation: slideInTop 1.5s ease-out;
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #ffffff;
+      text-shadow: 0 0 20px #0ff, 0 0 30px #00f0ff;
+      animation: pulse 4s infinite ease-in-out;
+    }
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url('https://cdn.wallpapersafari.com/49/11/QbA6xC.jpg') center/cover no-repeat;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border: 2px solid #00e6e6;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #00e6e6cc;
+      animation: float 6s ease-in-out infinite, glow 2s alternate infinite, fadeIn 2.5s ease-in-out;
+      text-align: left;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 4rem 2rem;
+      background: linear-gradient(to bottom, #1a1a1d, #0c0c0c);
+      animation: fadeInUp 2s ease-in-out;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #0ff;
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 0 25px #00ffff44;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    .card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px #00f0ffcc;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .card h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: #00e6ff;
+      text-shadow: 0 0 10px #00f0ff;
+      text-align: justify;
+    }
+    .card p {
+      font-size: 1rem;
+      color: #ccc;
+      text-align: justify;
+    }
+    footer {
+      text-align: justify;
+      padding: 1.5rem;
+      background: #000;
+      font-size: 1rem;
+      color: #888;
+      border-top: 1px solid #0ff;
+      animation: fadeIn 3s ease-in;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes slideInTop {
+      0% { transform: translateY(-100px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes glow {
+      0% { box-shadow: 0 0 10px #0ff; }
+      100% { box-shadow: 0 0 25px #00f0ff; }
+    }
+    @keyframes bgScroll {
+      0% { background-position: 0 0; }
+      100% { background-position: 10000px 10000px; }
+    }
+    @keyframes bgPulse {
+      0% { background: radial-gradient(circle at top, #0b0c2a, #1f2a5c); }
+      100% { background: radial-gradient(circle at top, #1f2a5c, #0b0c2a); }
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .hero h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Selamat datang di Website kelas 94</h1>
+  </header>
+  <section class="hero">
+    <h2>Selamat datang di Website kelas 94 Smp Negeri 01 Dramaga yang sudah lulus pada tahun 2024 </h2>
+  </section>
+  
+  
+  <section class="features">
+<div class="card" >
+  <img src="Aria.jpg" >
+  <div>
+    <h2 style="font-size:20px;">M Aria kusuma dinata  </h2>
+    <p>Kelas 94</p>
+    <p>Ketua kelas 94</p>
+  </div>
+</div>
+
+
+  <div class="card">
+  <img src="Darly.jpg">
+  <div>
+    <h2>Darly fairuz</h2>
+    <p>Kelas 94</p>
+    <p>Wakil ketua kelas 94</p>
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Adisty.jpg">
+  <div>
+    <h2>Adisty fauziah</h2>
+    <p>kelas 94</p>
+    <p>Sekertaris kelas 94</p>
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Alkansa.jpg">
+  <div>
+    <h2>Siti Alkansa</h2>
+    <p>Kelas 94</p>
+    <p>Sekertaris kelas 94</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="Sultan r.jpg">
+  <div>
+    <h2>Sultan Radit</h2>
+    <p>Kelas 94</p>
+    <p>Bendahara kelas 94</p>
+  </div>
+</div>
+
+
+
+<div class="card">
+  <img src="Kayla.jpg">
+  <div>
+    <h2> Kayla zia azahra</h2>
+    <p>Kelas 94</p>
+  <p>Keamanan kelas 94</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Rusdah.jpg">
+  <div>
+    <h2>Siti Rusdah </h2>
+    <p>Kelas 94</p>
+  <p>Kebersihan kelas 94</p>  
+  </div>
+</div>
+
+<div class="card">
+  <img src="Almaira.jpg">
+  <div>
+    <h2 style="font-size:20px;">Almaira Nurmaulida</h2>
+    <p>Kelas 94</p>
+  <p>Peralatan kelas 94</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Michle.jpg">
+  <div>
+    <h2 style="font-size:20px;">Michellia fitri oktaviani </h2>
+    <p>Kelas 94</p>
+  <p>Kesehatan kelas 94</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Najib.jpg">
+  <div>
+    <h2 style="font-size:20px;">Akhdan najib gautama </h2>
+    <p>Kelas 94</p>
+  <p>Keagamaan kelas 94</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Dewa.jpg">
+  <div>
+    <h2 style="font-size:15px;">I Made sudevadesta pucangan  </h2>
+    <p>Kelas 94</p>
+  <p>Pendidikan</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Tama.jpg">
+  <div>
+    <h2 style="font-size:20px;">M Pratama mauludin </h2>
+    <p>Kelas 94</p>
+  <p>Siswa </p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Arya s.jpg">
+  <div>
+    <h2>Arya saputra  </h2>
+    <p>Kelas 94</p>
+  <p>Siswa</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Ardeva.jpg">
+  <div>
+    <h2>Ardeva alghifari </h2>
+    <p>Kelas 94</p>
+  <p>Siswa</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Arizal.jpg">
+  <div>
+    <h2>Muhamad Arizal </h2>
+    <p>Kelas 94</p>
+  <p>Siswa</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Azizan.jpg">
+  <div>
+    <h2 style="font-size:15px;">Muhamad Azizan ramadhan </h2>
+    <p>Kelas 94</p>
+  <p>Siswa</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Orion.jpg">
+  <div>
+    <h2>Orion yosef</h2>
+    <p>Kelas 94</p>
+  <p>Siswa</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Noval.jpg">
+  <div>
+    <h2>Noval setiawan</h2>
+    <p>Kelas 94</p>
+  <p>Siswa</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Trian.jpg">
+  <div>
+    <h2>M Trian maulana</h2>
+    <p>Kelas 94</p>
+  <p>Siswa</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Raka.jpg">
+  <div>
+    <h2>M Raka</h2>
+    <p>Kelas 94</o>
+  <p>Siswa</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Zaldi.jpg">
+  <div>
+    <h2>Zaldi Trenggono</h2>
+    <p>Kelas 94</p>
+  <p>Siswa</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Rainmy.jpg">
+  <div>
+    <h2 style="font-size:15px;">Raimy Khalillah Anashaya</h2>
+    <p>Kelas 94</p>
+  <p>Siswa</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Sofi.jpg">
+  <div>
+    <h2>Tafana Sofi </h2>
+    <p>Kelas 94</p>
+  <p>Siswa</p>  
+  </div>
+</div>
+
+
+
+<div class="card">
+  <img src="Herli.jpg">
+  <div>
+    <h2>Herly Noviani</h2>
+    <p>Kelas 94</p>
+  <p>Siswa</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Fadilah.jpg">
+  <div>
+    <h2>siti padilah hariani</h2>
+    <p>Kelas 94</p>
+  <p>Siswa</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Sabrina.jpg">
+  <div>
+    <h2>Sabrina</h2>
+    <p>Kelas 94</p>
+  <p>Siswa</p>  
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="Peir.jpg">
+  <div>
+    <h2 style="font-size:20px;">Peireskia Candranita</h2>
+    <p>Kelas 94</p>
+  <p>Siswa</p>  
+  </div>
+</div>
+    
+  </section>
+  
+  
+  <footer>
+    &copy; Website ini di buat oleh Nexertc nama alias dari salah satu siswa kelas 94 dibuat menggunakan bahasa pemograman Css dan JavaScript dan di upload melalui platform bernama GitHub.
+  </footer>
+</body>
+</html>
