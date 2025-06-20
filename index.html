@@ -167,8 +167,79 @@
   transform: scale(1.05);
   box-shadow: 0 0 25px gold, 0 0 40px #ffcc00;
 }
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #111;
+  padding: 2rem;
+  border: 2px solid #0ff;
+  border-radius: 15px;
+  box-shadow: 0 0 30px #0ff;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.close {
+  color: #0ff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+}
+
+.gold-modal {
+  border: 2px solid gold !important;
+  box-shadow: 0 0 30px gold;
+  color: gold;
+}
+
+.gold-modal h2 {
+  color: gold;
+  text-shadow: 0 0 5px gold;
+}
      
-     
+     .blue-modal {
+  border: 2px solid #00f0ff;
+  box-shadow: 0 0 25px #00f0ff;
+  color: #00f0ff;
+}
+
+.blue-modal h2 {
+  color: #00f0ff;
+  text-shadow: 0 0 5px #00f0ff;
+}
+   
+
+.close {
+  color: #0ff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+}
+
+
+.gold-modal .close {
+  color: gold !important;
+  text-shadow: 0 0 5px gold;
+}
+
+.modal-content p{
+  color: white;
+}
    
     }
   </style>
@@ -470,5 +541,82 @@
   <footer>
     &copy; Website ini di buat oleh Nexertc nama alias dari salah satu siswa kelas 94 dibuat menggunakan bahasa pemograman Css dan JavaScript dan di upload melalui platform bernama GitHub.
   </footer>
+  
+  
+  
+  <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+  
+  
+  
+
+  const bios = {
+    "Aria": `
+      <h2>M Aria Kusuma Dinata</h2>
+     
+      <p>Aria adalah pemimpin kelas 94 yang dikenal disiplin, bertanggung jawab, dan selalu hadir tepat waktu. Ia sangat aktif dalam kegiatan sekolah dan dipercaya oleh teman-temannya.</p>
+    `,
+    "Darly": `
+      <h2>Darly Fairuz</h2>
+      
+      <p>Darly adalah wakil ketua kelas yang selalu membantu ketua dalam mengatur kelas. Ia dikenal bijak, ramah, dan kreatif.</p>
+    `,
+
+
+  };
+
+  const modal = document.getElementById("modal");
+  const modalBody = document.getElementById("modal-body");
+  const modalContent = document.querySelector(".modal-content");
+  const closeBtn = document.querySelector(".close");
+
+  document.querySelectorAll(".card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const fullName = card.querySelector("h2").innerText.trim();
+
+
+      modalContent.classList.remove("gold-modal", "blue-modal");
+
+      const namaKey = Object.keys(bios).find(key =>
+        fullName.toLowerCase().includes(key.toLowerCase())
+      );
+
+      if (namaKey) {
+        modalBody.innerHTML = bios[namaKey];
+
+        if (namaKey === "Aria" || namaKey === "Darly") {
+          modalContent.classList.add("gold-modal");
+        } else {
+          modalContent.classList.add("blue-modal");
+        }
+      } else {
+        modalBody.innerHTML = `<h2>${fullName}</h2><p>Biografi belum tersedia.</p>`;
+        modalContent.classList.add("blue-modal");
+      }
+
+      modal.style.display = "flex";
+    });
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+</script>
+  
+
 </body>
-</html>
+  </html>
